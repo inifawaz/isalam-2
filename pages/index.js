@@ -46,7 +46,7 @@ export default function Index({ projects }) {
                         </h3>
                         <div className='grid md:grid-cols-3 gap-4 md:gap-8'>
                             {projects
-                                .filter((item) => item.is_favourite === 1)
+                                .filter((item) => item.is_favourite === "1")
                                 .map((item, index) => (
                                     <ProjectItem
                                         href={`/projects/${item.id}`}
