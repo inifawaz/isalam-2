@@ -24,7 +24,7 @@ export default function ProjectItem({ data, href }) {
                 className=' h-fit cursor-pointer  transition-all'>
                 {data.featured_image_url ? (
                     <div className='relative shadow-md aspect-square'>
-                        {data.is_shown === 0 && (
+                        {data.is_shown == 0 && (
                             <div className='absolute py-4 inset-x-0 top-220 z-10 flex items-center justify-center bg-black/50'>
                                 <p className='text-white text-2xl'>
                                     Disembunyikan
@@ -32,7 +32,7 @@ export default function ProjectItem({ data, href }) {
                             </div>
                         )}
 
-                        {data.is_ended === 1 && (
+                        {data.is_ended == 1 && (
                             <div className='absolute inset-0 z-10 flex items-center justify-center bg-black/50'>
                                 <p className='text-white text-2xl'>selesai</p>
                             </div>
@@ -70,7 +70,7 @@ export default function ProjectItem({ data, href }) {
                         <div>
                             <p className='text-xs text-gray-400 leading-none'>
                                 Terkumpul{" "}
-                                {data.is_target === 1 ? (
+                                {data.is_target == 1 ? (
                                     <span>
                                         {data.percent_collected_amount}%
                                     </span>
@@ -80,7 +80,7 @@ export default function ProjectItem({ data, href }) {
                                 {formatToCurreny(data.collected_amount)}
                             </p>
                         </div>
-                        {data.is_target === 1 ? (
+                        {data.is_target == 1 ? (
                             <div>
                                 <p className='text-xs text-gray-400 leading-none text-right'>
                                     Target
@@ -93,9 +93,9 @@ export default function ProjectItem({ data, href }) {
                     </div>
                     <div
                         className={`h-1 rounded-full ${
-                            data.is_target === 1 ? "bg-gray-200" : null
+                            data.is_target == 1 ? "bg-gray-200" : null
                         } mt-1`}>
-                        {data.is_target === 1 ? (
+                        {data.is_target == 1 ? (
                             <div
                                 className='h-1 rounded-full bg-emerald-500'
                                 style={{
@@ -115,7 +115,7 @@ export default function ProjectItem({ data, href }) {
                                 {data.total_backers} Pewakaf
                             </p>
                         </div>
-                        {data.is_limited_time === 1 ? (
+                        {data.is_limited_time == 1 ? (
                             <div className='flex items-center space-x-1'>
                                 <BiTimer
                                     size={"1.2em"}

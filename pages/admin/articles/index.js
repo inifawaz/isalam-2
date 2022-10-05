@@ -98,7 +98,7 @@ export default function Index({ articles }) {
                             </Tab.Panel>
                             <Tab.Panel className={"flex flex-col space-y-4"}>
                                 {articles
-                                    .filter((item) => item.is_shown === 0)
+                                    .filter((item) => item.is_shown == 0)
                                     .map((item, index) => (
                                         <Link
                                             key={index}
