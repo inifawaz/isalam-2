@@ -44,29 +44,29 @@ export default function ProjectDetails({
     useEffect(() => {
         setPageLoading(false);
         setEditorLoaded(true);
-        if (project.is_limited_time === 1) {
+        if (project.is_limited_time == 1) {
             setIsLimitedTime(true);
-        } else if (project.is_limited_time === 0) {
+        } else if (project.is_limited_time == 0) {
             setIsLimitedTime(false);
         }
-        if (project.is_target === 1) {
+        if (project.is_target == 1) {
             setIsTarget(true);
-        } else if (project.is_target === 0) {
+        } else if (project.is_target == 0) {
             setIsTarget(false);
         }
-        if (project.is_shown === 1) {
+        if (project.is_shown == 1) {
             setIsShown(true);
-        } else if (project.is_shown === 0) {
+        } else if (project.is_shown == 0) {
             setIsShown(false);
         }
-        if (project.is_ended === 1) {
+        if (project.is_ended == 1) {
             setIsEnded(true);
-        } else if (project.is_ended === 0) {
+        } else if (project.is_ended == 0) {
             setIsEnded(false);
         }
-        if (project.is_favourite === 1) {
+        if (project.is_favourite == 1) {
             setIsFavourite(true);
-        } else if (project.is_favourite === 0) {
+        } else if (project.is_favourite == 0) {
             setIsFavourite(false);
         }
     }, []);
