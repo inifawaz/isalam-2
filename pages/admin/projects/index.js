@@ -153,6 +153,13 @@ export default function Projects() {
             },
         },
         {
+            name: "Pilihan",
+            type: "favourite",
+            get: function () {
+                getProjectsByType(this);
+            },
+        },
+        {
             name: "Disembunyikan",
             type: "hidden",
             get: function () {
