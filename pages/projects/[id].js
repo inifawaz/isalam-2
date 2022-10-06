@@ -78,7 +78,7 @@ export default function ProjectDetail({
     const handleBtnWakafSekarang = () => {
         // if (formik.errors.amount) return;
 
-        // if (formik.values.amount === "") {
+        // if (formik.values.amount == "") {
         //     elamount.current.scrollIntoView({
         //         behavior: "smooth",
         //         block: "center",
@@ -92,7 +92,7 @@ export default function ProjectDetail({
             // if (formik.errors.amount) return;
             if (formik.values.amount) setIsLoading(true);
 
-            if (formik.values.amount === "") {
+            if (formik.values.amount == "") {
                 elamount.current.scrollIntoView({
                     behavior: "smooth",
                     block: "center",
@@ -174,7 +174,7 @@ export default function ProjectDetail({
                             </Tab.Panel>
                         </Tab.Panels>
                     </Tab.Group>
-                    {project.is_ended === 1 ? (
+                    {project.is_ended == 1 ? (
                         <div>
                             <Link href='/projects'>
                                 <a className='block py-2 text-sm bg-primary-500 text-white rounded-md text-center mt-4'>
@@ -267,7 +267,7 @@ export default function ProjectDetail({
                             <div>
                                 <p className='text-xs text-gray-400 leading-none'>
                                     Terkumpul{" "}
-                                    {project.is_target === 1 ? (
+                                    {project.is_target == 1 ? (
                                         <span>
                                             {project.percent_collected_amount}%
                                         </span>
@@ -277,7 +277,7 @@ export default function ProjectDetail({
                                     {formatToCurreny(project.collected_amount)}
                                 </p>
                             </div>
-                            {project.is_target === 1 ? (
+                            {project.is_target == 1 ? (
                                 <div>
                                     <p className='text-xs text-gray-400 leading-none text-right'>
                                         Target
@@ -290,9 +290,9 @@ export default function ProjectDetail({
                         </div>
                         <div
                             className={`h-1 rounded-full ${
-                                project.is_target === 1 ? "bg-gray-200" : null
+                                project.is_target === "1" ? "bg-gray-200" : null
                             } mt-1`}>
-                            {project.is_target === 1 ? (
+                            {project.is_target === "1" ? (
                                 <div
                                     className='h-1 rounded-full bg-emerald-500'
                                     style={{
@@ -313,7 +313,7 @@ export default function ProjectDetail({
                                     {project.total_backers} Pewakaf
                                 </p>
                             </div>
-                            {project.is_limited_time === 1 ? (
+                            {project.is_limited_time == 1 ? (
                                 <div className='flex items-center space-x-1'>
                                     <BiTimer
                                         size={"1.2em"}
@@ -325,7 +325,7 @@ export default function ProjectDetail({
                                 </div>
                             ) : null}
                         </div>
-                        {project.is_ended === 1 ? (
+                        {project.is_ended == 1 ? (
                             <div>
                                 <Link href='/projects'>
                                     <a className='block py-2 text-sm bg-primary-500 text-white rounded-md text-center mt-4'>

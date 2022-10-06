@@ -157,7 +157,7 @@ export default function Header() {
                 setCookie("user", user);
                 setUser(user);
                 setToken(token);
-                router.push("/");
+                setDialogRegister(false);
             })
             .catch((error) => {
                 toast.error("ada yang salah, coba lagi nanti");
