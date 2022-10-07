@@ -248,12 +248,12 @@ export default function Index({ articles, topics }) {
 export async function getServerSideProps() {
     let articles = [];
     await axios.get("/articles").then((response) => {
-        console.log(response.data.articles);
+        // console.log(response.data.articles);
         articles = response.data.articles;
     });
     let topics = [];
     await axios.get("/topics").then((response) => {
-        console.log(response.data.topics);
+        // console.log(response.data.topics);
         topics = response.data.topics;
     });
     return {
