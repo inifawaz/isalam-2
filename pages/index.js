@@ -8,6 +8,7 @@ import ProjectItem from "../components/ProjectItem";
 import AppContext from "../context/AppContext";
 import { axios } from "../lib/axiosInstance";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 export default function Index({ projects }) {
     const { pageLoading, setPageLoading } = useContext(AppContext);
@@ -20,7 +21,21 @@ export default function Index({ projects }) {
 
     return (
         <>
+            <Head>
+                <meta property='og:type' content='article' />
+                <meta property='og:title' content='ISalam Wakaf Online ' />
+                <meta
+                    property='og:description'
+                    content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                />
+                <meta property='og:url' content='https://isalamwakaf.com/' />
+                <meta
+                    property='og:image'
+                    content='https://isalamwakaf.com/isalam-dark.png'
+                />
+            </Head>
             {pageLoading && <PageLoading />}
+
             <Layout>
                 <Container className={"grid md:grid-cols-1 gap-8 py-20"}>
                     <div className='md:px-20 flex flex-col items-center'>
