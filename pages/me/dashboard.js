@@ -100,7 +100,7 @@ export default function Dashboard() {
             )
             .then((response) => {
                 toast.success("berhasil logout");
-                console.log(response);
+                // console.log(response);
                 deleteCookie("token");
                 deleteCookie("user");
                 setUser(false);
@@ -149,9 +149,9 @@ export default function Dashboard() {
         }
         formData.append("_method", "PUT");
 
-        for (const [key, value] of formData.entries()) {
-            console.log(`${key}: ${value}`);
-        }
+        // for (const [key, value] of formData.entries()) {
+        //     console.log(`${key}: ${value}`);
+        // }
 
         await axios
             .post("/me", formData, {
@@ -161,14 +161,14 @@ export default function Dashboard() {
             })
             .then((response) => {
                 setUser(false);
-                console.log(response);
+                // console.log(response);
                 setUser(response.data.user);
-                console.log(user.role);
+                // console.log(user.role);
                 toast.success(response.data.message);
             })
             .catch((error) => {
                 toast.error("ada yang salah, coba lagi nanti");
-                console.log(error);
+                // console.log(error);
             })
             .finally(() => {
                 setIsLoading(false);

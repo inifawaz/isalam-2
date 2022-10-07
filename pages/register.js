@@ -40,7 +40,7 @@ export default function Register() {
             .post("/register", values)
             .then((response) => {
                 toast.success("akun anda berhasil dibuat");
-                console.log(response);
+                // console.log(response);
                 const token = response.data.token;
                 const user = response.data.user;
                 setCookie("token", token);

@@ -105,7 +105,7 @@ export default function Createtransaction({ project, paymentMethods, amount }) {
             )
             .then((response) => {
                 setIsLoading(false);
-                console.log(response);
+                // console.log(response);
                 window.open(response.data.payment.payment_url, "_blank");
                 router.push(
                     `/me/payments/${response.data.payment.merchant_order_id}`
@@ -336,7 +336,7 @@ export async function getServerSideProps({ req, res, query }) {
     let project = [];
     const { id, amount } = query;
     await axios.get(`/projects/${id}`).then((response) => {
-        console.log(response.data.project);
+        // console.log(response.data.project);
         project = response.data.project;
     });
     let paymentMethods = [];
@@ -354,7 +354,7 @@ export async function getServerSideProps({ req, res, query }) {
             }
         )
         .then((response) => {
-            console.log(response);
+            // console.log(response);
             paymentMethods = response.data.payment_methods;
         })
         .catch((error) => {

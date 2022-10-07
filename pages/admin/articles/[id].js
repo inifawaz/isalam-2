@@ -26,9 +26,9 @@ export default function ArticleDetails({ article, topics }) {
     const [isLoading, setIsLoading] = useState(false);
     const router = useRouter();
     useEffect(() => {
-        if (article.is_shown === 1) {
+        if (article.is_shown == 1) {
             setIsShown(true);
-        } else if (article.is_shown === 0) {
+        } else if (article.is_shown == 0) {
             setIsShown(false);
         }
     }, []);
@@ -52,9 +52,9 @@ export default function ArticleDetails({ article, topics }) {
         formData.append("content", editor);
         formData.append("is_shown", isShown ? 1 : 0);
         formData.append("_method", "PUT");
-        for (const [key, value] of formData.entries()) {
-            console.log(`${key}: ${value}`);
-        }
+        // for (const [key, value] of formData.entries()) {
+        //     console.log(`${key}: ${value}`);
+        // }
         await axios
             .post(`/admin/articles/${article.id}`, formData, {
                 headers: {
@@ -63,7 +63,7 @@ export default function ArticleDetails({ article, topics }) {
                 },
             })
             .then((response) => {
-                console.log(response);
+                // console.log(response);
                 router.push("/admin/articles");
                 toast.success(response.data.message);
             })
@@ -91,7 +91,7 @@ export default function ArticleDetails({ article, topics }) {
                 }
             )
             .then((response) => {
-                console.log(response);
+                // console.log(response);
                 setDialogDelete(false);
                 toast.success(response.data.message);
 
@@ -297,7 +297,7 @@ export async function getServerSideProps({ req, res, query }) {
         })
         .then((response) => {
             article = response.data.article;
-            console.log(response.data.article);
+            // console.log(response.data.article);
         })
         .catch((error) => {
             console.log(error);

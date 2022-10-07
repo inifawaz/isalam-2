@@ -405,7 +405,7 @@ export default function PaymentDetails({ payment }) {
                                     className='text-xl text-primary-500 font-bold'>
                                     {payment.va_number}
                                 </p>
-                                <button
+                                {/* <button
                                     onClick={() => {
                                         navigator.clipboard.writeText(
                                             vaNumber.current.innerText
@@ -416,7 +416,7 @@ export default function PaymentDetails({ payment }) {
                                     }}
                                     className='py-1 px-2 rounded-md text-sm bg-secondary-500 text-white'>
                                     salin
-                                </button>
+                                </button> */}
                             </div>
                         </div>
                         <div className='py-4'>

@@ -153,7 +153,7 @@ export async function getServerSideProps({ req, res }) {
         })
         .then((response) => {
             articles = response.data.articles;
-            console.log(response.data.articles);
+            // console.log(response.data.articles);
         })
         .catch((error) => {
             console.log(error);

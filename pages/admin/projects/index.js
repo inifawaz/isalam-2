@@ -96,7 +96,7 @@ export default function Projects() {
                 },
             })
             .then((response) => {
-                console.log(response);
+                // console.log(response);
                 setProjects(response.data.projects);
                 setPaginations(null);
             })

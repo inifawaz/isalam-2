@@ -44,9 +44,9 @@ export default function Create({ topics }) {
         }
         formData.append("featured_image_url", featuredImage);
         formData.append("content", editor);
-        for (const [key, value] of formData.entries()) {
-            console.log(`${key}: ${value}`);
-        }
+        // for (const [key, value] of formData.entries()) {
+        //     console.log(`${key}: ${value}`);
+        // }
         await axios
             .post(`/admin/articles`, formData, {
                 headers: {
@@ -55,7 +55,7 @@ export default function Create({ topics }) {
                 },
             })
             .then((response) => {
-                console.log(response);
+                // console.log(response);
                 router.push("/admin/articles");
                 toast.success(response.data.message);
             })

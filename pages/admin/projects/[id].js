@@ -123,9 +123,9 @@ export default function ProjectDetails({
         formData.append("is_limited_time", isLimitedTime ? 1 : 0);
         formData.append("is_favourite", isFavourite ? 1 : 0);
         formData.append("_method", "PUT");
-        for (const [key, value] of formData.entries()) {
-            console.log(`${key}: ${value}`);
-        }
+        // for (const [key, value] of formData.entries()) {
+        //     console.log(`${key}: ${value}`);
+        // }
         await axios
             .post(`/admin/projects/${project.id}`, formData, {
                 headers: {
@@ -134,7 +134,7 @@ export default function ProjectDetails({
                 },
             })
             .then((response) => {
-                console.log(response);
+                // console.log(response);
                 router.push("/admin/projects");
                 toast.success(response.data.message);
             })
@@ -166,7 +166,7 @@ export default function ProjectDetails({
                 }
             )
             .then((response) => {
-                console.log(response.data);
+                // console.log(response.data);
                 toast.success(response.data.message);
                 router.reload(window.location.pathname);
             })
@@ -197,7 +197,7 @@ export default function ProjectDetails({
                 }
             )
             .then((response) => {
-                console.log(response.data);
+                // console.log(response.data);
                 toast.success(response.data.message);
                 router.reload(window.location.pathname);
             })
@@ -219,7 +219,7 @@ export default function ProjectDetails({
                 },
             })
             .then((response) => {
-                console.log(response);
+                // console.log(response);
                 toast.success(response.data.message);
 
                 router.push(`/admin/projects`);
@@ -1079,7 +1079,7 @@ export async function getServerSideProps({ req, res, query }) {
             },
         })
         .then((response) => {
-            console.log(response);
+            // console.log(response);
             project = response.data.project;
             categories = response.data.categories;
             statistics = response.data.statistics;

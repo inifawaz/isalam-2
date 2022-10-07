@@ -15,7 +15,7 @@ export default function Index({ projects }) {
 
     useEffect(() => {
         setPageLoading(false);
-        console.log(getCookie("token"));
+        // console.log(getCookie("token"));
     }, [router]);
 
     return (

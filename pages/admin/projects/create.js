@@ -137,7 +137,7 @@ export default function Create({ categories }) {
                 },
             })
             .then((response) => {
-                console.log(response);
+                // console.log(response);
                 router.push("/admin/projects");
                 toast.success(response.data.message);
             })
@@ -710,7 +710,7 @@ export async function getServerSideProps({ req, res }) {
             },
         })
         .then((response) => {
-            console.log(response);
+            // console.log(response);
             categories = response.data.categories;
         })
         .catch((error) => {
