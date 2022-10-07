@@ -37,6 +37,9 @@ export default function Index({ projects }) {
                     property='og:image'
                     content='https://ppdb.pesantrenalmadinah.or.id/assets/images/almadinah_icon_color.jpg'
                 />
+                <meta property='og:image:width' content='148' />
+
+                <meta property='og:image:height' content='148' />
             </Head>
             {pageLoading && <PageLoading />}
 
