@@ -20,21 +20,19 @@ export default function Index({ projects }) {
     }, [router]);
 
     return (
-        <>
+        <div>
             <Head>
-                <Head>
-                    <meta
-                        name='description'
-                        content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
-                        key='wakaf'
-                    />
-                    <meta property='og:title' content='I-Salam Wakaf Online' />
-                    <meta
-                        property='og:description'
-                        content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
-                    />
-                    <meta property='og:image' content='/favicon-48x48.png' />
-                </Head>
+                <meta
+                    name='description'
+                    content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                    key='wakaf'
+                />
+                <meta property='og:title' content='I-Salam Wakaf Online' />
+                <meta
+                    property='og:description'
+                    content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                />
+                <meta property='og:image' content='/favicon-48x48.png' />
             </Head>
             {pageLoading && <PageLoading />}
 
@@ -98,7 +96,7 @@ export default function Index({ projects }) {
                     </div>
                 </Container>
             </Layout>
-        </>
+        </div>
     );
 }
 
