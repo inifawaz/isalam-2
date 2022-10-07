@@ -70,8 +70,9 @@ export default function Createtransaction({ project, paymentMethods, amount }) {
     });
 
     const formik = useFormik({
+        enableReinitialize: true,
         initialValues: {
-            on_behalf: "",
+            on_behalf: user.full_name,
         },
         validationSchema: yup.object({
             on_behalf: yup.string().required("tidak boleh kosong"),
@@ -141,6 +142,7 @@ export default function Createtransaction({ project, paymentMethods, amount }) {
                                 formik.errors.on_behalf
                             }
                         />
+
                         <div className='mb-8 mt-8'>
                             <label
                                 htmlFor='small-toggle'
