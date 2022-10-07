@@ -130,11 +130,12 @@ export default function Createtransaction({ project, paymentMethods, amount }) {
                             {project.name}
                         </p>
                     </div>
-                    <div>
+                    <div className='shadow-md bg-sky-50 border p-4 rounded-md'>
                         <Input
                             label={"Program Wakaf Ini Atas Nama"}
                             placeholder='nama anda/orang tua anda/orang yang anda sayangi/dll'
                             name='on_behalf'
+                            value={formik.values.on_behalf}
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                             error={
@@ -143,7 +144,7 @@ export default function Createtransaction({ project, paymentMethods, amount }) {
                             }
                         />
 
-                        <div className='mb-8 mt-8'>
+                        <div className=''>
                             <label
                                 htmlFor='small-toggle'
                                 className='inline-flex relative items-center mb-1 cursor-pointer'>
@@ -164,7 +165,7 @@ export default function Createtransaction({ project, paymentMethods, amount }) {
                         </div>
                     </div>
                     <div>
-                        <div>
+                        <div className='mt-8'>
                             <p className=''>Pilih Metode Pembayaran</p>
                             <RadioGroup
                                 className={"flex flex-col space-y-2 divide-y-2"}
@@ -194,7 +195,7 @@ export default function Createtransaction({ project, paymentMethods, amount }) {
                                                                         className={classNames(
                                                                             "w-full border-2 p-2 rounded-md",
                                                                             checked
-                                                                                ? "border-secondary-500 shadow-md"
+                                                                                ? "border-secondary-500 bg-secondary-50 shadow-md"
                                                                                 : ""
                                                                         )}>
                                                                         <div
