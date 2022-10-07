@@ -154,7 +154,7 @@ export default function Create({ categories }) {
         <Layout>
             <Container className={"flex space-x-8"}>
                 <AdminNav />
-                <div>
+                <div className='grow-0'>
                     <h1 className='text-2xl font-semibold tracking-wider text-gray-500 mb-2'>
                         Buat Program Wakaf Baru
                     </h1>
@@ -354,7 +354,7 @@ export default function Create({ categories }) {
                             <a className='text-center block mt-8'>Kembali</a>
                         </Link>
                     </form> */}
-                    <form onSubmit={formik.handleSubmit}>
+                    <form className='max-w-2xl' onSubmit={formik.handleSubmit}>
                         <div className='mb-4'>
                             <label className='text-gray-500 tracking-wider block mb-1'>
                                 Foto Program Wakaf
@@ -395,13 +395,16 @@ export default function Create({ categories }) {
                             onBlur={formik.handleBlur}
                             error={formik.touched.name && formik.errors.name}
                         />
-                        <Editor
-                            label={"Deskripsi"}
-                            onChange={(data) => {
-                                setEditor(data);
-                            }}
-                            data={editor}
-                        />
+                        <div>
+                            <Editor
+                                label={"Deskripsi"}
+                                onChange={(data) => {
+                                    setEditor(data);
+                                }}
+                                data={editor}
+                            />
+                        </div>
+
                         <label className='block mb-4'>
                             <span className='text-gray-500 tracking-wider mb-1'>
                                 Kategori
