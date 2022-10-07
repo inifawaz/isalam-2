@@ -22,17 +22,19 @@ export default function Index({ projects }) {
     return (
         <>
             <Head>
-                <meta property='og:type' content='article' />
-                <meta property='og:title' content='ISalam Wakaf Online ' />
-                <meta
-                    property='og:description'
-                    content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
-                />
-                <meta property='og:url' content='https://isalamwakaf.com/' />
-                <meta
-                    property='og:image'
-                    content='https://isalamwakaf.com/isalam-dark.png'
-                />
+                <Head>
+                    <meta
+                        name='description'
+                        content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                        key='wakaf'
+                    />
+                    <meta property='og:title' content='I-Salam Wakaf Online' />
+                    <meta
+                        property='og:description'
+                        content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                    />
+                    <meta property='og:image' content='/favicon-48x48.png' />
+                </Head>
             </Head>
             {pageLoading && <PageLoading />}
 
