@@ -35,7 +35,7 @@ export default function Index({ projects }) {
                 />
                 <meta
                     property='og:image'
-                    content='https://isalamwakaf.com/favicon-48x48.png'
+                    content='https://ppdb.pesantrenalmadinah.or.id/assets/images/almadinah_icon_color.jpg'
                 />
             </Head>
             {pageLoading && <PageLoading />}
