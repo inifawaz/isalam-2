@@ -40,7 +40,7 @@ export default function Index({ projects }) {
                 />
                 <meta
                     property='og:image'
-                    content='https://isalamwakaf.com/isalam-dark.png'
+                    content='https://isalamwakaf.com/isalam-bg-white.png'
                 />
                 <meta property='og:image:width' content='607' />
 
