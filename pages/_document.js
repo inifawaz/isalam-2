@@ -4,7 +4,6 @@ export default function Document() {
     return (
         <Html>
             <Head>
-                <title>i-Salam Wakaf Online</title>
                 <link
                     rel='icon'
                     type='image/png'

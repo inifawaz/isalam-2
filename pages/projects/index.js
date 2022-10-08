@@ -1,5 +1,6 @@
 import { Tab } from "@headlessui/react";
 import { getCookie } from "cookies-next";
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { createContext, useContext, useEffect, useState } from "react";
@@ -95,6 +96,31 @@ export default function Index({ projects: a, categories, paginations: b }) {
 
     return (
         <>
+            <Head>
+                <title>i-Salam Wakaf Online</title>
+
+                <meta
+                    name='description'
+                    content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                    key='wakaf'
+                />
+                <meta
+                    property='og:title'
+                    content="I-Salam Wakaf Online | I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                />
+                <meta property='og:url' content='https://isalamwakaf.com/' />
+                <meta
+                    property='og:description'
+                    content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                />
+                <meta
+                    property='og:image'
+                    content='https://isalamwakaf.com/isalam-bg-white.png'
+                />
+                <meta property='og:image:width' content='607' />
+
+                <meta property='og:image:height' content='160' />
+            </Head>
             {pageLoading && <PageLoading />}
             <Layout>
                 <Container>

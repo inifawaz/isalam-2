@@ -8,6 +8,7 @@ import Layout from "../../components/Layout";
 import AppContext from "../../context/AppContext";
 import { axios } from "../../lib/axiosInstance";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 export default function Index({ articles, topics }) {
     const classNames = (...classes) => classes.filter(Boolean).join(" ");
@@ -21,6 +22,34 @@ export default function Index({ articles, topics }) {
     return (
         <>
             <Layout>
+                <Head>
+                    <title>i-Salam Wakaf Online</title>
+
+                    <meta
+                        name='description'
+                        content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                        key='wakaf'
+                    />
+                    <meta
+                        property='og:title'
+                        content="I-Salam Wakaf Online | I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                    />
+                    <meta
+                        property='og:url'
+                        content='https://isalamwakaf.com/'
+                    />
+                    <meta
+                        property='og:description'
+                        content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                    />
+                    <meta
+                        property='og:image'
+                        content='https://isalamwakaf.com/isalam-bg-white.png'
+                    />
+                    <meta property='og:image:width' content='607' />
+
+                    <meta property='og:image:height' content='160' />
+                </Head>
                 <Container>
                     <h2 className='text-2xl font-medium text-gray-500'>
                         Artikel

@@ -14,6 +14,7 @@ import Link from "next/link";
 import formatToCurreny from "../../../utils/formatToCurreny";
 import toast from "react-hot-toast";
 import * as yup from "yup";
+import Head from "next/head";
 
 export default function Createtransaction({ project, paymentMethods, amount }) {
     const bbb = [
@@ -123,6 +124,31 @@ export default function Createtransaction({ project, paymentMethods, amount }) {
     };
     return (
         <Layout>
+            <Head>
+                <title>i-Salam Wakaf Online</title>
+
+                <meta
+                    name='description'
+                    content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                    key='wakaf'
+                />
+                <meta
+                    property='og:title'
+                    content="I-Salam Wakaf Online | I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                />
+                <meta property='og:url' content='https://isalamwakaf.com/' />
+                <meta
+                    property='og:description'
+                    content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                />
+                <meta
+                    property='og:image'
+                    content='https://isalamwakaf.com/isalam-bg-white.png'
+                />
+                <meta property='og:image:width' content='607' />
+
+                <meta property='og:image:height' content='160' />
+            </Head>
             <Container className={"min-h-screen"}>
                 <div className='bg-white shadow-md max-w-xl mx-auto p-6 border'>
                     <div className='mb-4'>

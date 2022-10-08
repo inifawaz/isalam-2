@@ -5,10 +5,36 @@ import Layout from "../../components/Layout";
 import { axios } from "../../lib/axiosInstance";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function ArticleDetails({ article }) {
     return (
         <Layout>
+            <Head>
+                <title>i-Salam Wakaf Online</title>
+
+                <meta
+                    name='description'
+                    content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                    key='wakaf'
+                />
+                <meta
+                    property='og:title'
+                    content="I-Salam Wakaf Online | I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                />
+                <meta property='og:url' content='https://isalamwakaf.com/' />
+                <meta
+                    property='og:description'
+                    content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                />
+                <meta
+                    property='og:image'
+                    content='https://isalamwakaf.com/isalam-bg-white.png'
+                />
+                <meta property='og:image:width' content='607' />
+
+                <meta property='og:image:height' content='160' />
+            </Head>
             <Container>
                 <div className='max-w-2xl w-full mx-auto bg-white shadow-md rounded-md border'>
                     <div className=' h-fit flex flex-col   transition-all'>

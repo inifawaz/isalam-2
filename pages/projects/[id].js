@@ -26,6 +26,7 @@ import { data } from "autoprefixer";
 import formatToCurreny from "../../utils/formatToCurreny";
 import Link from "next/link";
 import toast from "react-hot-toast";
+import Head from "next/head";
 
 export default function ProjectDetail({
     project,
@@ -112,6 +113,31 @@ export default function ProjectDetail({
 
     return (
         <Layout>
+            <Head>
+                <title>i-Salam Wakaf Online</title>
+
+                <meta
+                    name='description'
+                    content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                    key='wakaf'
+                />
+                <meta
+                    property='og:title'
+                    content="I-Salam Wakaf Online | I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                />
+                <meta property='og:url' content='https://isalamwakaf.com/' />
+                <meta
+                    property='og:description'
+                    content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                />
+                <meta
+                    property='og:image'
+                    content='https://isalamwakaf.com/isalam-bg-white.png'
+                />
+                <meta property='og:image:width' content='607' />
+
+                <meta property='og:image:height' content='160' />
+            </Head>
             <Container className={"grid md:grid-cols-5 gap-8"}>
                 <div className='col-span-3 h-fit'>
                     <div>
