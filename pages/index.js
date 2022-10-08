@@ -37,9 +37,9 @@ export default function Index({ projects }) {
                     property='og:image'
                     content='https://isalamwakaf.com/favicon-48x48.png'
                 />
-                <meta property='og:image:width' content='48' />
+                <meta property='og:image:width' content='148' />
 
-                <meta property='og:image:height' content='48' />
+                <meta property='og:image:height' content='148' />
             </Head>
             {pageLoading && <PageLoading />}
 
