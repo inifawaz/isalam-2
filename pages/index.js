@@ -29,7 +29,10 @@ export default function Index({ projects }) {
                     content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
                     key='wakaf'
                 />
-                <meta property='og:title' content='I-Salam Wakaf Online' />
+                <meta
+                    property='og:title'
+                    content="I-Salam Wakaf Online | I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
+                />
                 <meta property='og:url' content='https://isalamwakaf.com/' />
                 <meta
                     property='og:description'
@@ -37,11 +40,11 @@ export default function Index({ projects }) {
                 />
                 <meta
                     property='og:image'
-                    content='https://ppdb.pesantrenalmadinah.or.id/assets/images/almadinah_icon_color.jpg'
+                    content='https://isalamwakaf.com/isalam-dark.png'
                 />
-                <meta property='og:image:width' content='148' />
+                <meta property='og:image:width' content='607' />
 
-                <meta property='og:image:height' content='148' />
+                <meta property='og:image:height' content='160' />
             </Head>
             {pageLoading && <PageLoading />}
 
