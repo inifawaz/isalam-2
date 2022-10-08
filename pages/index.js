@@ -22,6 +22,8 @@ export default function Index({ projects }) {
     return (
         <div>
             <Head>
+                <title>i-Salam Wakaf Online</title>
+
                 <meta
                     name='description'
                     content="I-Salam menyediakan berbagai macam program wakaf yang dikelola secara profesional dan amanah serta diawasi oleh para asatidzah Ahlus Sunnah Wal Jama'ah"
@@ -35,7 +37,7 @@ export default function Index({ projects }) {
                 />
                 <meta
                     property='og:image'
-                    content='https://isalamwakaf.com/favicon-48x48.png'
+                    content='https://ppdb.pesantrenalmadinah.or.id/assets/images/almadinah_icon_color.jpg'
                 />
                 <meta property='og:image:width' content='148' />
 
