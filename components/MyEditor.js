@@ -3,7 +3,7 @@ import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import { getCookie } from "cookies-next";
 
-const API_URL = "http://127.0.0.1:8000/api";
+const API_URL = "https://api.isalamwakaf.com";
 const UPLOAD_ENDPOINT = "assets/img/projects/content";
 
 export default function MyEditor({
@@ -82,11 +82,11 @@ export default function MyEditor({
                     // editor.ui.view.editable.element.style.minHeight = "500px";
                     // editor.ui.view.editable.element.style.maxWidth = "100%";
                 }}
-                onBlur={(event, editor) => {}}
-                onFocus={(event, editor) => {}}
+                onBlur={(event, editor) => { }}
+                onFocus={(event, editor) => { }}
                 onChange={inputHandler}
                 data={data}
-                // {...props}
+            // {...props}
             />
             {/* )} */}
         </div>
