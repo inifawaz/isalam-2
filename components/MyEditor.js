@@ -3,7 +3,7 @@ import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import { getCookie } from "cookies-next";
 
-const API_URL = "https://api.isalamwakaf.com";
+const API_URL = "https://api.isalamwakaf.com/api";
 const UPLOAD_ENDPOINT = "assets/img/projects/content";
 
 export default function MyEditor({
