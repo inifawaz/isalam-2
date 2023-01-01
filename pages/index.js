@@ -13,6 +13,7 @@ import Head from "next/head";
 export default function Index({ projects }) {
     const { pageLoading, setPageLoading } = useContext(AppContext);
     const router = useRouter();
+    const projectFavourite = projects.filter((item) => item.is_favourite === "1");
 
     useEffect(() => {
         setPageLoading(false);
@@ -71,17 +72,21 @@ export default function Index({ projects }) {
                         <h3 className='text-2xl text-white t font-semibold mb-4'>
                             Program Wakaf Pilihan
                         </h3>
-                        <div className='grid md:grid-cols-3 gap-4 md:gap-8'>
-                            {projects
-                                .filter((item) => item.is_favourite === "1")
-                                .map((item, index) => (
-                                    <ProjectItem
-                                        href={`/projects/${item.id}`}
-                                        key={index}
-                                        data={item}
-                                    />
-                                ))}
-                        </div>
+
+                        {projectFavourite > 0 && (
+                            <div className='grid md:grid-cols-3 gap-4 md:gap-8'>
+                                {projects
+                                    .filter((item) => item.is_favourite === "1")
+                                    .map((item, index) => (
+                                        <ProjectItem
+                                            href={`/projects/${item.id}`}
+                                            key={index}
+                                            data={item}
+                                        />
+                                    ))}
+                            </div>
+                        )}
+
                     </div>
                 </Container>
                 <Container className={""}>
