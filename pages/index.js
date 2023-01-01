@@ -67,13 +67,15 @@ export default function Index({ projects }) {
                         </Link>
                     </div>
                 </Container>
-                <Container className={""}>
-                    <div className='bg-gradient-to-r from-sky-900 to-primary-800 shadow-xl rounded-md border p-4 md:p-8'>
-                        <h3 className='text-2xl text-white t font-semibold mb-4'>
-                            Program Wakaf Pilihan
-                        </h3>
+                {projectFavourite > 0 && (
+                    <Container className={""}>
+                        <div className='bg-gradient-to-r from-sky-900 to-primary-800 shadow-xl rounded-md border p-4 md:p-8'>
+                            <h3 className='text-2xl text-white t font-semibold mb-4'>
+                                Program Wakaf Pilihan
+                            </h3>
 
-                        {projectFavourite > 0 && (
+
+
                             <div className='grid md:grid-cols-3 gap-4 md:gap-8'>
                                 {projects
                                     .filter((item) => item.is_favourite === "1")
@@ -85,10 +87,11 @@ export default function Index({ projects }) {
                                         />
                                     ))}
                             </div>
-                        )}
 
-                    </div>
-                </Container>
+                        </div>
+                    </Container>
+                )}
+
                 <Container className={""}>
                     <div className='bg-gradient-to-r from-sky-900 to-primary-800 shadow-xl rounded-md border p-4 md:p-8'>
                         <h3 className='text-2xl text-white t font-semibold mb-4'>
