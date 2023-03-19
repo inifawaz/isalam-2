@@ -20,6 +20,7 @@ const ManualPaymentItem = ({ item, mutate }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [receiptUrl, setReceiptUrl] = useState(data.receipt_url);
     const [receiptFile, setReceiptFile] = useState(null);
+    const [totalAmount, setTotalAmount] = useState(data.amount + data.maintenance_fee);
     const convertDate = (value) => {
         const date = new Date(value?.toString());
         const day = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
@@ -208,7 +209,7 @@ const ManualPaymentItem = ({ item, mutate }) => {
                 </div>
                 <div className='mb-1'>
                     <p className=' text-dark-500 font-semibold'>Total</p>
-                    <p className='text-xl text-dark-500'>{formatToCurreny(data.amount + data.maintenance_fee)}</p>
+                    <p className='text-xl text-dark-500'>{formatToCurreny(Number(data.maintenance_fee) + Number(data.amount))}</p>
                 </div>
 
                 {statusCode == 1 || statusCode == 2 || statusCode == 3 ? (
