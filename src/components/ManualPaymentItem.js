@@ -214,8 +214,8 @@ const ManualPaymentItem = ({ item, mutate }) => {
 
                 {statusCode == 1 || statusCode == 2 || statusCode == 3 ? (
                     <Button onClick={() => setOpen(true)} btn='btn-brand-light' className='mt-4' width={'w-full'} >Lihat Bukti Pembayaran</Button>
-                ) : !isAdmin && <Button onClick={() => setOpen(true)} className='mt-4' width={'w-full'} >Upload Bukti Pembayaran</Button>}
-                {statusCode == 0 && !isAdmin && (
+                ) :  <Button onClick={() => setOpen(true)} className='mt-4' width={'w-full'} >Upload Bukti Pembayaran</Button>}
+                {statusCode == 0  && (
                     <div className='flex justify-center mt-6'>
                         <p onClick={() => setOpenHelp(true)} className='inline cursor-pointer text-dark-400 font-semibold text-sm'>Cara Pembayaran</p>
                     </div>
